@@ -10,7 +10,7 @@ You have been hired to perform Red Team and Blue Team tasks in the provided envi
 
 This task requires gaining access to a fileserver and retrieving a token from said fileserver. No username or password is provided for the server.
 
-Initially, my first thought is to perform recon on the filerserver, so lets an nmap scan:
+Initially, my first thought is to perform recon on the filerserver, so lets run an nmap scan:
 
 `nmap -sV fileserver`
 
@@ -62,7 +62,7 @@ Using netcat, we can try to connect to the service.
 
 The service is expecting us to send it a python script. Maybe it will execute the python code we send it!
 
-Using two terminals, both ssh'd into the fileserver, I'll set up reverse shell handler using netcat and send a python payload to the http-proxy server. This should give us a reverse shell on the hidden server, allowing us to run arbitrary commands and hopefully retrieve our token
+Using two terminals, both ssh'd into the fileserver, I'll set up reverse shell handler using netcat and send a python payload to the http-proxy server. This should give us a reverse shell on the hidden server, allowing us to run arbitrary commands and hopefully retrieve our token.
 
 #### Terminal 1
 
@@ -137,7 +137,7 @@ Now we need to figure out which Common Vulnerability and Exposure (CVE) the atta
 
 ![alt text](image-18.png)
 
-The attacker used CVE-2021-4034. A quick google search shows some information about this exploit. It's commonly known and "PwnKit" and targets Polkit's `pkexec` utility to perform local privilege escalation.
+The attacker used CVE-2021-4034. A quick google search shows some information about this exploit. It's commonly known as "PwnKit" and targets Polkit's `pkexec` utility to perform local privilege escalation.
 
 Entering this into `http://grader` gives us the token we need for this question.
 
@@ -209,7 +209,7 @@ It looks like there are only directories here. Let's search through the whole `/
 
 ![alt text](image-29.png)
 
-There's only one file. Lets look at its permissions.
+Only one file is returned. Lets look at its permissions.
 
 ![alt text](image-30.png)
 
