@@ -5,6 +5,6 @@ As I go through the practice area for CISA's President's Cup CTF, I like to crea
 Shoutout to the CISA President's Cup team for always putting on a fun event and maintaining this practice range!
 
 ### Links
-President's Cup home page: https://presidentscup.cisa.gov/
-Practice Range: https://presidentscup.cisa.gov/ctf/practice
-GitHub: https://github.com/cisagov/prescup-challenges
+President's Cup home page: https://presidentscup.cisa.gov/  
+Practice Range: https://presidentscup.cisa.gov/ctf/practice  
+GitHub: https://github.com/cisagov/prescup-challenges  
